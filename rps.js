@@ -48,7 +48,8 @@ function game() {
           continue2 = window.prompt("Enter y to play again!");
 
           if (continue2 !== "y") {
-      break;
+            alert("Thank you for playing! Come again soon!")
+            break;
     }
 
   } else {
@@ -59,6 +60,6 @@ function game() {
 }
 
 
-// alert("You entered "+ human);
+
 
   game();
