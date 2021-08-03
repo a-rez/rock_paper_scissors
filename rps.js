@@ -10,43 +10,55 @@ function whoWins(computer, human) {
   }
 
   if (computer === 'r' && human === 's') {
-    return "Computer wins!"
+    return "Computer played r! Computer wins!"
   }
 
   if (computer === 'r' && human === 'p') {
-    return "Human wins!"
+    return "Computer played r! Human wins!"
   }
 
   if (computer === 'p' && human === 'r') {
-    return "Computer wins!"
+    return "Computer played p! Computer wins!"
   }
 
   if (computer === 'p' && human === 's') {
-    return "Human wins!"
+    return "Computer played p! Human wins!"
   }
 
   if (computer === 's' && human === 'r') {
-    return "Human wins!"
+    return "Computer played s! Human wins!"
   }
 
   if (computer === 's' && human === 'p') {
-    return "Computer wins!"
+    return "Computer played s! Computer wins!"
   }
 }
 
-function game(human) {
-  let computer = computerPlay();
-  whoWins(computer, human);
+function game() {
+  for (let i = 0; i <= 4; i++) {
+
+    var human = window.prompt("You have found the hidden rock paper scissors! Which do you choose: r, p, or s?");
+    if ((human == 'r')||(human == 'p')||(human == 's')) {
+
+
+          let computer = computerPlay();
+
+          alert(whoWins(computer, human));
+          var continue2 = "y";
+          continue2 = window.prompt("Enter y to play again!");
+
+          if (continue2 !== "y") {
+      break;
+    }
+
+  } else {
+    alert("Aaaa my feeble mind doesn't understand, please enter r, p, or s.")
+  }
+
+ }
 }
 
 
-var human = window.prompt("You have found the hidden rock paper scissors! Which do you choose: r, p, or s?");
+// alert("You entered "+ human);
 
-alert("You entered "+ human);
-
-if ((human == 'r')||(human == 'p')||(human == 's')) {
-  game(human);
-
-} else {
-  alert("Aaaa my feeble mind doesn't understand, please enter r, p, or s.")
-}
+  game();
