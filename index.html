@@ -2,8 +2,18 @@
 <html>
 <head>
   <title>Secret Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <script src="rps.js"></script>
+
+  <button id = "mainbutton" class = "mainbutton" onclick="game()">Let's Play</button>
+  <button id = "reset" class = "reset">Play Again</button>
+  <p id="scoreboard"></p>
+  <p id="p2">Welcome to Rock, Paper, Scissors!</p>
+
+  <button class = "buttons" onclick="rock()">Rock</button>
+  <button class = "buttons" onclick="paper()">Paper</button>
+  <button class = "buttons" onclick="scissors()">Scissors</button>
+  <script defer src="rps.js"></script>
 </body>
 </html>
