@@ -6,14 +6,20 @@
 </head>
 <body>
 
-  <button id = "mainbutton" class = "mainbutton" onclick="game()">Let's Play</button>
-  <button id = "reset" class = "reset">Play Again</button>
-  <p id="scoreboard"></p>
+  <button id = "mainbutton" onclick="game()">Let's Play</button>
+  <!--<button id = "reset" class = "reset">Play Again</button>-->
+  <div id="scoreboard">
+  <p id="computerScoreboard"></p>
+  <p id="humanScoreboard"></p>
   <p id="p2">Welcome to Rock, Paper, Scissors!</p>
+  </div>
 
-  <button class = "buttons" onclick="rock()">Rock</button>
-  <button class = "buttons" onclick="paper()">Paper</button>
-  <button class = "buttons" onclick="scissors()">Scissors</button>
+  <!-- <button class = "buttons" onclick="rock()">Rock</button> -->
+  <input type="image" class = "buttons" src="rock.png" onclick="rock()"></input>
+  <input type="image" class = "buttons" src="paper.png" onclick="paper()"></input>
+  <input type="image" class = "buttons" src="scissors.png" onclick="scissors()"></input>
+  <!--<button class = "buttons" onclick="paper()">Paper</button>
+  <button class = "buttons" onclick="scissors()">Scissors</button> -->
   <script defer src="rps.js"></script>
 </body>
 </html>

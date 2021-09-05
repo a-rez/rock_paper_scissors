@@ -1,6 +1,6 @@
 let human2;
 let humanScore = 0;
-var computerScore = 0;
+let computerScore = 0;
 
 let physicalButtons = document.getElementsByClassName("buttons");
 console.log(physicalButtons[0].style);
@@ -9,7 +9,7 @@ for (let i=0;i < Array.from(physicalButtons).length; i++) {
   console.log(physicalButtons[i].style.visibility = "hidden");
 }
 
-document.getElementById("reset").style.visibility = "hidden";
+// document.getElementById("reset").style.visibility = "hidden";
 
 function computerPlay() {
   let index4 = Math.floor(Math.random() * 3);
@@ -54,39 +54,40 @@ function whoWins(computer, human) {
 }
 
 
-// let human;
+let human;
 
 function rock() {
   console.log("you rock");
-  human2 = 'r';
+  human = 'r';
 }
 
 function paper() {
   console.log("you paper");
-  human2 = 'p';
+  human = 'p';
 }
 
 function scissors() {
   console.log("you scissor");
-  human2 = 's';
+  human = 's';
 }
 
-function findHuman() {
-  return human2;
-}
 
 function displayWinner() {
-  let human = findHuman();
   if (human) {
     if ((human == 'r')||(human == 'p')||(human == 's')) {
 
       let computer = computerPlay();
       document.getElementById("p2").innerHTML = whoWins(computer, human);
+      document.getElementById("computerScoreboard").innerHTML = `Computer's score: ${computerScore}`;
+      document.getElementById("humanScoreboard").innerHTML = `Your score: ${humanScore}`;
   }
  }
 }
 
 function game() {
+    document.getElementById("mainbutton").innerText = "Reset";
+    document.getElementById("computerScoreboard").innerHTML = `Computer's score: 0`;
+    document.getElementById("humanScoreboard").innerHTML = `Your score: 0`;
 
     for (let i=0;i < Array.from(physicalButtons).length; i++) {
       console.log(physicalButtons[i].style.visibility = "visible");
@@ -98,16 +99,13 @@ function game() {
     console.log(buttons);
     buttons.forEach(button => button.addEventListener('click', displayWinner));
     console.log(computerScore);
-    document.getElementById("scoreboard").innerHTML = computerScore;
 
     // for (let i=0;i < Array.from(physicalButtons).length; i++) {
     //  console.log(physicalButtons[i].style.visibility = "hidden");
     // }
 
-    document.getElementById("reset").style.visibility = "visible";
+    // document.getElementById("reset").style.visibility = "visible";
 
-
-
-
+    
 }
 

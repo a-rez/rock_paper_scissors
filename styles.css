@@ -17,10 +17,16 @@ body,html {
     size: 500px;
     color: black;
     background-color: grey;
-    padding: 15px 32px;
+    padding: 45px 32px;
 }
 
 p {
     font-size: 40px;
     line-height: 100px;
+}
+
+input[type='image'] {
+    width: 130px;
+    height: 100px;
+    margin: 1px;
 }
